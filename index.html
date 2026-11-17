@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The People Who Shaped Me</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="background-orb orb-one"></div>
+  <div class="background-orb orb-two"></div>
+
+  <main class="container">
+
+    <header>
+      <p class="eyebrow">A CLASSROOM VOTING EXPERIENCE</p>
+      <h1>The People Who <span>Shaped Me</span></h1>
+      <p class="subtitle">
+        Every choice, every person, every experience leaves a mark.
+      </p>
+    </header>
+
+    <section class="game-card">
+
+      <div class="top-line">
+        <span id="questionNumber">QUESTION 01 / 05</span>
+        <span class="live-indicator">● LIVE VOTING</span>
+      </div>
+
+      <div class="progress-track">
+        <div id="progressBar" class="progress-fill"></div>
+      </div>
+
+      <p class="question-label">WHAT DO YOU THINK?</p>
+      <h2 id="questionText"></h2>
+
+      <p class="instruction">
+        Ask the class to raise their hands, then enter the vote totals below.
+      </p>
+
+      <div class="voting-area">
+
+        <div class="vote-card green-card">
+          <div class="vote-icon">✦</div>
+          <h3>GREEN FLAG</h3>
+          <p>A positive influence</p>
+          <label for="greenVotes">Number of votes</label>
+          <input id="greenVotes" type="number" min="0" step="1" value="0">
+        </div>
+
+        <div class="vote-card red-card">
+          <div class="vote-icon">✕</div>
+          <h3>RED FLAG</h3>
+          <p>A negative influence</p>
+          <label for="redVotes">Number of votes</label>
+          <input id="redVotes" type="number" min="0" step="1" value="0">
+        </div>
+
+      </div>
+
+      <div class="results-section">
+        <div class="results-heading">
+          <h3>CLASS RESULTS</h3>
+          <span id="totalVotes">0 votes</span>
+        </div>
+
+        <div class="result-row">
+          <div class="result-label">
+            <span>Green Flag</span>
+            <strong id="greenPercentage">0%</strong>
+          </div>
+          <div class="result-track">
+            <div id="greenBar" class="result-fill green-fill"></div>
+          </div>
+        </div>
+
+        <div class="result-row">
+          <div class="result-label">
+            <span>Red Flag</span>
+            <strong id="redPercentage">0%</strong>
+          </div>
+          <div class="result-track">
+            <div id="redBar" class="result-fill red-fill"></div>
+          </div>
+        </div>
+
+        <p id="resultMessage" class="result-message">
+          Enter the class votes to see the results.
+        </p>
+      </div>
+
+      <div class="buttons">
+        <button id="resetButton" class="secondary-button">
+          Reset votes
+        </button>
+        <button id="nextButton" class="primary-button">
+          Next question →
+        </button>
+      </div>
+
+    </section>
+
+    <section id="finalScreen" class="final-screen hidden">
+      <p class="eyebrow">THE RESULTS ARE IN</p>
+      <h2>Our Class <span>Verdict</span></h2>
+      <p class="final-intro">
+        Here's how everyone voted across all five questions.
+      </p>
+
+      <div id="summaryList" class="summary-list"></div>
+
+      <div class="final-buttons">
+        <button id="restartButton" class="primary-button">
+          Start again ↻
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      <p>THE PEOPLE WHO SHAPED ME · CLASSROOM EDITION</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
